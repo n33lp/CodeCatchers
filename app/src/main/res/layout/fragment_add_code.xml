@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightbackground"
+    tools:context=".AddCodeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/addQRImage"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addHumanName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Human Readable Name"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/addScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/addPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Take a Photo of Location"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/add_loc_photoButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/geoLocation" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/geoLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/save_geolocation_of_qr_code"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+        <EditText
+            android:id="@+id/editTextComment"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="Comment here"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/empty_divider"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                style="@style/myButton"
+                android:id="@+id/cancelButton"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="@string/cancel" />
+
+            <Button
+                style="@style/myButton"
+                android:id="@+id/addButton"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="@string/add_code" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_loc_photoButton"
+            style="@style/myButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/geoLocation" />
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="111dp"
+            android:layout_height="148dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/add_loc_photoButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addPhoto"
+            tools:src="@tools:sample/avatars" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:clickable="true"
+    android:backgroundTint="@color/primary2"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingLeft="5dp">
+
+        <TextView
+            android:id="@+id/usernameLeaderBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Username"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/usernameLeaderBoard"
+            android:paddingTop="10dp"
+            android:text="Score: "
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/leaderBoardEditScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/usernameLeaderBoard"
+            android:layout_toRightOf="@+id/textViewScore"
+            android:paddingTop="10dp"
+            android:text="XXX"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/LeaderBoardRank"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:text="X"
+            android:textColor="#000000"
+            android:textSize="50sp" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

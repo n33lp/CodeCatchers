@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+
+android {
+    namespace 'com.example.lab_4_codecatchers'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.lab_4_codecatchers"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        viewBinding true;
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation platform('com.google.firebase:firebase-bom:31.2.3')
+    implementation 'com.google.firebase:firebase-firestore:24.1.1'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
+    implementation 'com.android.car.ui:car-ui-lib:2.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    //for testing
+    androidTestImplementation "androidx.test:runner:1.2.0"
+    androidTestImplementation "androidx.test:rules:1.2.0"
+    //dependency for Material Components
+    implementation 'com.google.android.material:material:1.8.0'
+    // needed for the camera to work
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'//https://github.com/yuriy-budiyev/code-scanner
+    implementation 'com.squareup.picasso:picasso:2.8' // https://github.com/square/picasso
+    implementation "androidx.camera:camera-camera2:1.1.0"
+    implementation "androidx.camera:camera-lifecycle:1.1.0"
+    implementation "androidx.camera:camera-view:1.0.0-alpha30"
+
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+}

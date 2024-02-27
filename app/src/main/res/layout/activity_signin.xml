@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightbackground">
+
+    <TextView
+        android:id="@+id/textViewFirstTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First time setup!"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/textViewUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username (required):"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/textViewEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirstTime" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="189dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="User123"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:text="Email (optional):"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/textViewPhoneNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
+
+    <EditText
+        android:id="@+id/editTextEmailAddress"
+        android:layout_width="189dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="abcde@gmail.com"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+
+    <TextView
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_width="189dp"
+        android:layout_height="48dp"
+        android:text="Phone number (optional):"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/button_get_started"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="189dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="xxx-xxx-xxxx"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhoneNumber" />
+
+
+    <Button
+        android:id="@+id/button_get_started"
+        style="@style/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPhoneNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
